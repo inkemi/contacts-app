@@ -1,3 +1,47 @@
-<p>
-  contact-list-item works!
-</p>
+<fieldset class="fieldset">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Company" [(ngModel)]="company">
+    </mat-form-field>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="First name" [(ngModel)]="firstName">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Last Name" [(ngModel)]="lastName">
+      </mat-form-field></td>
+    </tr></table>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Phone" [(ngModel)]="firstName">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Street" [(ngModel)]="street">
+      </mat-form-field>
+
+    </p>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043" [(ngModel)]="zip">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="City" [(ngModel)]="city">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Country" [(ngModel)]="country">
+      </mat-form-field></td>
+
+    </tr></table>
+  </form>
+</fieldset>
+
+<mat-list>
+  <h3 mat-subheader>Users</h3>
+  <ekoodi-user-info *ngFor="let user of users" [user]="user">
+  </ekoodi-user-info>
+</mat-list>

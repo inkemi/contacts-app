@@ -1,10 +1,10 @@
 export class Contact {
-  id: number;
-  company: string;
+  id?: number;
+  company?: string;
   firstname: string;
   lastname: string;
-  phone: string;
-  address: {
+  phone?: string;
+  address?: {
     street: string,
     city: string,
     zip: string,

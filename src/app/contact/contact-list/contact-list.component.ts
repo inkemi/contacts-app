@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-list.component.css']
 })
 
-
-
 export class ContactListComponent implements OnInit {
-
 
   constructor() {
   }

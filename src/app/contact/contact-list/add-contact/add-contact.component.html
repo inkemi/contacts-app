@@ -1,0 +1,41 @@
+<fieldset class="fieldset">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input placeholder="Company" [(ngModel)]="contact.company" name="company" [ngModelOptions]="{updateOn: 'blur'}">
+    </mat-form-field>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input placeholder="First Name" [(ngModel)]="contact.firstName" name="first" [ngModelOptions]="{updateOn: 'blur'}">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input mat placeholder="Last Name" name="contact.lastName" ngModel [ngModelOptions]="{updateOn: 'blur'}">
+      </mat-form-field></td>
+    </tr></table>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <input mat placeholder="Phone" name="contact.phone" ngModel [ngModelOptions]="{updateOn: 'blur'}">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input mat placeholder="Street" name="contact.street" ngModel [ngModelOptions]="{updateOn: 'blur'}">
+      </mat-form-field>
+
+    </p>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input #postalCode maxlength="5"  placeholder="Postal Code" [(ngModel)]="contact.zip" name="zip" [ngModelOptions]="{updateOn: 'blur'}">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input placeholder="City" [(ngModel)]="contact.city" name="city" [ngModelOptions]="{updateOn: 'blur'}">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input placeholder="Country" [(ngModel)]="contact.country" name="country" [ngModelOptions]="{updateOn: 'blur'}">
+      </mat-form-field></td></tr>
+      <tr><td>    <button mat-raised-button (click)="addUser()">Add Customer</button></td>
+      </tr></table>
+  </form>
+</fieldset>

@@ -1,44 +1,4 @@
-<fieldset class="fieldset">
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Company" [(ngModel)]="company">
-    </mat-form-field>
 
-    <table class="example-full-width" cellspacing="0"><tr>
-      <td><mat-form-field class="example-full-width">
-        <input matInput placeholder="First name" [(ngModel)]="firstName">
-      </mat-form-field></td>
-      <td><mat-form-field class="example-full-width">
-        <input matInput placeholder="Last Name" [(ngModel)]="lastName">
-      </mat-form-field></td>
-    </tr></table>
-
-    <p>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Phone" [(ngModel)]="firstName">
-      </mat-form-field>
-      <br>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Street" [(ngModel)]="street">
-      </mat-form-field>
-
-    </p>
-
-    <table class="example-full-width" cellspacing="0"><tr>
-      <td><mat-form-field class="example-full-width">
-        <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043" [(ngModel)]="zip">
-        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-      </mat-form-field></td>
-      <td><mat-form-field class="example-full-width">
-        <input matInput placeholder="City" [(ngModel)]="city">
-      </mat-form-field></td>
-      <td><mat-form-field class="example-full-width">
-        <input matInput placeholder="Country" [(ngModel)]="country">
-      </mat-form-field></td></tr>
-      <tr><td>    <button mat-raised-button (click)="addUser()">Add Customer</button></td>
-    </tr></table>
-  </form>
-</fieldset>
 
 <!--
 <mat-card class="example-card">
@@ -62,10 +22,11 @@
 </mat-card>
 -->
 
-<!---
+<!--ca-contact-list-item
 <mat-list>
   <h3 mat-subheader>Contacts</h3>
-  <ekoodi-list-item> *ngFor="let contact of contacts" [contact]="contact">
-  </ekoodi-list-item>
+   <contact-list-item> *ngFor="let contact of contacts" [contact]="contact">
+  </contact-list-item>
 </mat-list>
---->
+-->
+
